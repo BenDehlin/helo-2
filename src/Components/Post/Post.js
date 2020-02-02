@@ -7,7 +7,7 @@ import {deletePost} from '../../redux/postReducer'
 import {TiDeleteOutline, TiEdit, TiZoomOutline} from 'react-icons/ti'
 
 function Post(props){
-  const {id, author_id, author_name, author_img, title, img, content} = props.post
+  const {id, author_id, author_name, title,} = props.post
   const {deletePost, user, history} = props
   return(
     <div className='post'>

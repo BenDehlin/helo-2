@@ -71,9 +71,9 @@ export default function authReducer(state = initialState, action){
     //LOGOUT
     case LOGOUT + PENDING:
       return {...state, loading: true, errorMessage: ''}
-    case LOGIN + FULFILLED:
+    case LOGOUT + FULFILLED:
       return {...state, user: payload, loading: false, errorMessage: ''}
-    case LOGIN + REJECTED:
+    case LOGOUT + REJECTED:
       return {...state, loading: false, errorMessage: payload}
     //DEFAULT
     default:

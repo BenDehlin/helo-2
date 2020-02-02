@@ -5,11 +5,11 @@ import './UserPage.css'
 
 function UserPage(props){
   const {user} = props
-  const {id, username, img} = user || ''
+  const {username, img} = user || ''
   return (
     <div>
       <h1>User: {username}</h1>
-      <img src={img} className='profile-pic' />
+      <img src={img} className='profile-pic' alt='profile' />
       </div>
   )
 }

@@ -88,7 +88,7 @@ export default function postReducer(state = initialState, action){
       return {...state, loading: true, errorMessage: ''}
     case PUT_POST + FULFILLED:
       return {...state, posts: payload, loading: false, errorMessage: ''}
-    case POST_POST + REJECTED:
+    case PUT_POST + REJECTED:
       return {...state, loading: false, errorMessage: payload}
     //DELETE_POST
     case DELETE_POST + PENDING:

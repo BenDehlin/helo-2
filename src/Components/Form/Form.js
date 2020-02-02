@@ -42,7 +42,7 @@ class Form extends Component{
   }
   handleChange = ({name, value}) => this.setState({[name]: value})
   handleSubmit = () => {
-    const {id, author_id, title, img, content, editing} = this.state
+    const {id, title, img, content, editing} = this.state
     const {history, postPost, putPost, user} = this.props
     if(editing === true){
       putPost({id, author_id: user.id, title, img, content})
@@ -53,30 +53,38 @@ class Form extends Component{
     history.push('/dashboard')
   }
   render(){
-    const {id, title, img, content, editing} = this.state
+    const {title, img, content} = this.state
     return (
       <div className='form'>
-        <input
-        name='title'
-        value={title}
-        placeholder='enter title'
-        onChange = {(e) => this.handleChange(e.target)}
-        />
-        <input
-        name='img'
-        value={img}
-        placeholder='enter url'
-        onChange = {(e) => this.handleChange(e.target)}
-        />
-        <textarea
-        name='content'
-        value={content}
-        placeholder='enter post content here'
-        onChange = {(e) => this.handleChange(e.target)}
-        />
-        <button
-        onClick = {() => this.handleSubmit()}
-        >Submit</button>
+        <div className='left-form'>
+          <input
+          name='title'
+          value={title}
+          placeholder='enter title'
+          onChange = {(e) => this.handleChange(e.target)}
+          />
+          <input
+          name='img'
+          value={img}
+          placeholder='enter url'
+          onChange = {(e) => this.handleChange(e.target)}
+          />
+          <textarea
+          name='content'
+          value={content}
+          placeholder='enter post content here'
+          onChange = {(e) => this.handleChange(e.target)}
+          />
+          <button
+          onClick = {() => this.handleSubmit()}
+          >Submit</button>
+        </div>
+        <div className='right-form'>
+          <img 
+          src={img || 'https://via.placeholder.com/250'} 
+          alt={title}
+          className='post-img' />
+        </div>
       </div> 
     )
   }

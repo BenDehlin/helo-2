@@ -20,8 +20,18 @@
   width: 100%;
   min-height: 90vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+input{
+  border: solid 2px var(--accent-alt) ;
+  background-color: var(--accent-color);
+}
+
+textarea{
+  border: solid 2px var(--accent-alt) ;
+  background-color: var(--accent-color);
 }
 
 button{
@@ -45,7 +55,7 @@ button:hover{
 }
 
 .icon:hover{
-  color: var(--accent-alt);
+  color: white;
 }
 
 .profile-pic{

@@ -26,16 +26,20 @@ class BigPost extends Component{
   }
 
   render(){
-    const {id, author_name, author_img, title, img, content} = this.state
+    const {author_name, author_img, title, img, content} = this.state
     return (
       <div>
         <div className='author-info'>
           <span>{author_name}</span>
-          <img src ={author_img || `https://robohash.org/${author_name}`} />
+          <img src ={author_img || `https://robohash.org/${author_name}`}
+          alt='profile'
+          />
         </div>
         <div className='post-info'>
           <h1>{title}</h1>
-          <img src = {img || 'https://placeholder.com/250'} /> 
+          <img src = {img || 'https://placeholder.com/250'}
+          alt='post'
+          /> 
           <p>{content}</p>
         </div>
       </div>

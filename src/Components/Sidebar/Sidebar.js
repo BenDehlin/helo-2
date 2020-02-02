@@ -12,7 +12,7 @@ const Sidebar = (props) => {
       <h1>{username}</h1>
       <img 
       onClick = {() => history.push(`/user/${id}`)}
-      src={img} className='profile-pic' />
+      src={img} className='profile-pic' alt={username} />
     </div>
   )
 }
