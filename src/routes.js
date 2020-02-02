@@ -5,6 +5,7 @@ import Dashboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/Login'
 import Form from './Components/Form/Form'
 import BigPost from './Components/Post/BigPost'
+import UserPage from './Components/UserPage/UserPage'
 
 
 //Landing Page, Dashboard, Login Page, Register Page, Create/Edit Post
@@ -16,5 +17,6 @@ export default (
     <Route exact path = '/form' component={Form} />
     <Route path = '/form/:id' component={Form} />
     <Route path = '/post/:id' component={BigPost} />
+    <Route path = '/user/:id' component={UserPage} />
   </Switch>
 )

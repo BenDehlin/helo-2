@@ -4,3 +4,9 @@
   min-height: 90vh;
   background-color: var(--primary-color);
 }
+
+@media(max-width: 900px){
+  .sidebar{
+    display: none;
+  }
+}

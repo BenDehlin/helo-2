@@ -4,6 +4,7 @@ import './Login.css'
 import {connect} from 'react-redux'
 import {login} from '../../redux/authReducer'
 import {register} from '../../redux/authReducer'
+import {AiOutlineLogin} from 'react-icons/ai'
 
 class Login extends Component{
   constructor(props){
@@ -41,9 +42,10 @@ class Login extends Component{
         placeholder='enter password'
         onChange={(e) => this.handleChange(e.target)}
         />
-        <button
+        <AiOutlineLogin
+        className = 'icon'
         onClick = {() => this.handleLogin()}
-        >{registerBool ? 'Register' : 'Login'}</button>
+        />
       </div>
     )
   }

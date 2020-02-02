@@ -4,31 +4,35 @@ import './Header.css'
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logout} from '../../redux/authReducer'
+import {AiOutlineLogout} from 'react-icons/ai'
+import {TiHomeOutline, TiDocumentAdd} from 'react-icons/ti'
 
 function Header(props){
   const {user, logout, history} = props
   return (
     <header>
       <nav>
-        <span>Welcome {user.username}</span>
-        <button
+        <TiHomeOutline
+        className = 'icon'
         onClick = {() => {
           history.push('/dashboard')
         }}
-        >Dashboard</button>
+        />
         {user.id &&
-        <button
+        <TiDocumentAdd
+        className = 'icon'
         onClick ={() => {
           history.push('/form')
         }}
-        >Create</button>
+        />
         }
-        <button
+        <AiOutlineLogout
+        className = 'icon'
         onClick = {() => {
           logout()
           history.push('/login')
         }}
-        >Logout</button>
+        />
       </nav>
     </header>
   )

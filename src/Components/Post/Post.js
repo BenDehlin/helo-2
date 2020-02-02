@@ -4,6 +4,7 @@ import './Post.css'
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {deletePost} from '../../redux/postReducer'
+import {TiDeleteOutline, TiEdit, TiZoomOutline} from 'react-icons/ti'
 
 function Post(props){
   const {id, author_id, author_name, author_img, title, img, content} = props.post
@@ -12,26 +13,30 @@ function Post(props){
     <div className='post'>
       <h1>{author_name}</h1>
       <h1>{title}</h1>
-      <button
+      <div className='buttons'>
+      <TiZoomOutline
+      className = 'icon'
         onClick = {() => {
           history.push(`/post/${id}`)
         }}
-        >View Post</button> 
+        />
       {user.id === author_id &&
-      <span>
-        <button
+      <span className='buttons buttons-span'>
+        <TiEdit
+        className = 'icon'
         onClick = {() => {
           history.push(`/form/${id}`)
         }}
-        >Edit</button>
-        <button
-        onClick = {() => {
-          deletePost(id)
-        }}
-        >X</button>
+        />
+          <TiDeleteOutline
+          className = 'icon delete-icon'
+          onClick = {() => {
+            deletePost(id)
+          }}
+          />
       </span>
-    
       }
+      </div>
     </div>
   )
 }

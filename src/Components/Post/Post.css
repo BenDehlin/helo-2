@@ -5,3 +5,27 @@
   background-color: var(--secondary-color);
   margin-bottom: 30px;
 }
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons-span{
+  width: 66%;
+}
+
+.delete-icon{
+  border-radius: 50%;
+}
+
+.delete-icon:hover{
+  background-color: var(--primary-color);
+}
+
+@media(max-width: 900px){
+  .post{
+    width: 90vw;
+  }
+}
