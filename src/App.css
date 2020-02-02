@@ -2,8 +2,17 @@
   margin: 0;
 }
 
+:root{
+  --primary-color: #004040;
+  --secondary-color: #008080;
+  --accent-color: #b3ffff;
+  --accent-alt: #66ffff;
+  --shadow: #e8ffff;
+}
+
 .App {
   text-align: center;
+  background-color: var(--primary-color);
 }
 
 .main{
@@ -12,4 +21,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: var(--accent-color);
+  box-shadow: 2px 2px var(--shadow);
+}
+
+button:hover{
+  background-color: var(--accent-alt);
+  box-shadow: 2px 2px var(--accent-color);
 }

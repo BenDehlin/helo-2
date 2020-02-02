@@ -1,7 +1,8 @@
+@import url('../../App.css');
 header{
   width: 100%;
   height: 10vh;
-  background-color: black;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;

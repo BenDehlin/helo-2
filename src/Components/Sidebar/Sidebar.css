@@ -1,5 +1,6 @@
+@import url('../../App.css');
 .sidebar{
   min-width: 200px;
   min-height: 90vh;
-  background-color: black;
+  background-color: var(--primary-color);
 }

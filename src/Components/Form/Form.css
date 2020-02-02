@@ -1,0 +1,12 @@
+@import url('../../App.css');
+
+.form{
+  padding: 20px 0px;
+  background-color: var(--secondary-color) ;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 40vw;
+  min-height: 40vh; 
+}

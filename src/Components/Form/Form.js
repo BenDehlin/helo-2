@@ -55,7 +55,7 @@ class Form extends Component{
   render(){
     const {id, title, img, content, editing} = this.state
     return (
-      <div>
+      <div className='form'>
         <input
         name='title'
         value={title}
