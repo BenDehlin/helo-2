@@ -1,0 +1,22 @@
+const actionTypes = {
+  //AUTH
+  GET_USER: 'GET_USER',
+  REGISTER: 'REGISTER',
+  LOGIN: 'LOGIN',
+  LOGOUT: 'LOGOUT',
+
+  //POSTS
+  GET_POST: 'GET_POST',
+  GET_POSTS: 'GET_POSTS',
+  POST_POST: 'POST_POST',
+  PUT_POST: 'PUT_POST',
+  DELETE_POST: 'DELETE_POST',
+
+  //STATUS
+  PENDING: '_PENDING',
+  FULFILLED: '_FULFILLED',
+  REJECTED: '_REJECTED'
+
+}
+
+export default actionTypes
