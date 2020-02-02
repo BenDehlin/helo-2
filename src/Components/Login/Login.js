@@ -24,9 +24,8 @@ class Login extends Component{
   }
   render(){
     const {registerBool, username, password} = this.state
-    // const {login, register} = this.props
     return (
-      <div>
+      <div className='login-page'>
         <button
         onClick={() => this.setState({registerBool: !registerBool})}
         >{registerBool ? 'Switch to Login' : 'Switch to Register'} </button>

@@ -9,11 +9,16 @@ function Post(props){
   const {id, author_id, author_name, author_img, title, img, content} = props.post
   const {deletePost, user, history} = props
   return(
-    <div>
+    <div className='post'>
       <h1>{author_name}</h1>
       <h1>{title}</h1>
+      <button
+        onClick = {() => {
+          history.push(`/post/${id}`)
+        }}
+        >View Post</button> 
       {user.id === author_id &&
-      <div>
+      <span>
         <button
         onClick = {() => {
           history.push(`/form/${id}`)
@@ -23,8 +28,9 @@ function Post(props){
         onClick = {() => {
           deletePost(id)
         }}
-        >Delete</button>
-      </div>      
+        >X</button>
+      </span>
+    
       }
     </div>
   )

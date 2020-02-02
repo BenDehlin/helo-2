@@ -26,14 +26,18 @@ class Form extends Component{
     if(id){
       axios.get(`/api/post/${id}`).then(results => {
         const {title, img, content, author_id} = results.data
-        console.log(results.data)
         if(author_id === user.id){
-          console.log('hit')
           this.setState({id, author_id, title, img, content, editing: true})
         }else{
           this.setState({author_id: user.id, editing: false})
         }
       }).catch(err => console.log(err))
+    }
+  }
+  componentDidUpdate(prevProps){
+    const {id} = this.props.match.params
+    if(!id && this.props !== prevProps){
+      this.setState({id: '', title: '', img: '', content: '', editing: false})
     }
   }
   handleChange = ({name, value}) => this.setState({[name]: value})
@@ -80,7 +84,6 @@ class Form extends Component{
 
 const mapStateToProps = (state) => {
   const {user} = state.authReducer
-  // const {post} = state.postReducer
   return {user}
 }
 const mapDispatchToProps = {postPost, putPost}

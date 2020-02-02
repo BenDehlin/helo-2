@@ -14,9 +14,9 @@ class Dashboard extends Component{
   }
 
   render(){
-    const {posts, loading} = this.props
+    const {posts} = this.props
     return(
-      <div>
+      <div className = 'dashboard'>
         {posts && posts.map(post => {
           return (
             <Post key={post.id} post={post} />
@@ -28,9 +28,9 @@ class Dashboard extends Component{
 }
 
 const mapStateToProps = (state) => {
-  const {posts, loading} = state.postReducer
+  const {posts} = state.postReducer
   return {
-    posts, loading
+    posts
   }
 }
 const mapDispatchToProps = {

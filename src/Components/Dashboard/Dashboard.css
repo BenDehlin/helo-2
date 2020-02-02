@@ -1,0 +1,9 @@
+.dashboard{
+  width: 100%;
+  min-height: 90vh;
+  background-color: gainsboro;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}

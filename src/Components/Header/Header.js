@@ -1,10 +1,9 @@
 import React from 'react'
 import '../../App.css'
 import './Header.css'
-import axios from 'axios'
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {logout, getUser} from '../../redux/authReducer'
+import {logout} from '../../redux/authReducer'
 
 function Header(props){
   const {user, logout, history} = props
@@ -12,6 +11,18 @@ function Header(props){
     <header>
       <nav>
         <span>Welcome {user.username}</span>
+        <button
+        onClick = {() => {
+          history.push('/dashboard')
+        }}
+        >Dashboard</button>
+        {user.id &&
+        <button
+        onClick ={() => {
+          history.push('/form')
+        }}
+        >Create</button>
+        }
         <button
         onClick = {() => {
           logout()
