@@ -9,7 +9,7 @@ function UserPage(props){
   return (
     <div>
       <h1>User: {username}</h1>
-      <img src={img} className='profile-pic' alt='profile' />
+      <img src={img} className='profile-pic' alt={username} />
       </div>
   )
 }

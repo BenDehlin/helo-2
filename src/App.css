@@ -20,7 +20,7 @@
   width: 100%;
   min-height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
