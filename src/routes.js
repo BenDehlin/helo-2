@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import LandingPage from './Components/LandingPage/LandingPage'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/NewLogin'
-import Form from './Components/Form/Form'
+import Form from './Components/Form/hookForm'
 import BigPost from './Components/Post/BigPost'
 import UserPage from './Components/UserPage/UserPage'
 
