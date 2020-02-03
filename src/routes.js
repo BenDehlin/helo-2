@@ -1,10 +1,10 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 import LandingPage from './Components/LandingPage/LandingPage'
-import Dashboard from './Components/Dashboard/Dashboard'
+import Dashboard from './Components/Dashboard/HookDashboard'
 import Login from './Components/Login/hookLogin'
 import Form from './Components/Form/hookForm'
-import BigPost from './Components/Post/BigPost'
+import BigPost from './Components/Post/HookBigPost'
 import UserPage from './Components/UserPage/UserPage'
 
 
